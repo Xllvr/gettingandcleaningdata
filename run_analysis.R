@@ -1,3 +1,8 @@
+## Dataset and Required Packages
+install.packages("dplyr")
+library(dplyr)
+download.files("http://d396qusza40orc.cloudfront.net/getdata%2Fprojectfiles%2FUCI%20HAR%20Dataset.zip", "./UCI HAR Dataset")
+
 ## Obtaining Data from Dataset
 features <- read.table("UCI HAR Dataset/features.txt", col.names = c("id", "functions"))
 activities <- read.table("UCI HAR Dataset/activity_labels.txt", col.names = c("label", "activity"))
