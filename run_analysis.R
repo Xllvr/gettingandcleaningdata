@@ -1,6 +1,7 @@
 ## Dataset and Required Packages
 install.packages("dplyr")
 library(dplyr)
+if (!file.exists = "./data") { dir.create("./data) }
 download.files("http://d396qusza40orc.cloudfront.net/getdata%2Fprojectfiles%2FUCI%20HAR%20Dataset.zip", "./UCI HAR Dataset")
 
 ## Obtaining Data from Dataset
