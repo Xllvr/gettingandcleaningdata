@@ -1,3 +1,13 @@
+## Obtaining Data from Dataset
+features <- read.table("UCI HAR Dataset/features.txt", col.names = c("id", "functions"))
+activities <- read.table("UCI HAR Dataset/activity_labels.txt", col.names = c("label", "activity"))
+test.subj <- read.table("UCI HAR Dataset/test/subject_test.txt", col.names = "subject")
+test.x <- read.table("UCI HAR Dataset/test/X_test.txt", col.names = features$functions)
+test.y <- read.table("UCI HAR Dataset/test/y_test.txt", col.names = "label")
+train.subj <- read.table("UCI HAR Dataset/train/subject_train.txt", col.names = "subject")
+train.x <- read.table("UCI HAR Dataset/train/X_train.txt", col.names = features$functions)
+train.y <- read.table("UCI HAR Dataset/train/y_train.txt", col.names = "label")
+
 ## Combining Data from the Test and Train Datasets
 X <- rbind(test.x, train.x)
 Y <- rbind(test.y, train.y)
